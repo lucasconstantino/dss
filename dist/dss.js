@@ -49,7 +49,7 @@
  	xhr.onreadystatechange = ensureReadiness;
  	function ensureReadiness() {
  		if(xhr.readyState < 4) {
- 			return;
+ 			return;c
  		}
  		if(xhr.status !== 200) {
  			return;
@@ -309,7 +309,6 @@
 		var flattedProperties = {};
 		properties.forEach(function(property){
 			var propertyValue = property.match(/[^\;]*/gmi)[0].split(':');
-			console.log(propertyValue);
 			flattedProperties[propertyValue[0].trim()] = propertyValue.splice(1).join('').trim();
 		});
 
